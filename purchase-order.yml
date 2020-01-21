@@ -1,0 +1,44 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: purchase-order
+  
+  datasource:
+    url: jdbc:oracle:thin:@UHPEXA01-scan.renters-choice-inc.com:1521/ENTDS01OLTP01
+    username: SIMSAPP01
+    password: ENC(MkdAKsYBATOnC5YqYgG0sEWD5mL7gzZt)
+#    initialSize: 1
+#    minIdle: 1
+#    maxIdle: 15
+#    maxActive: 5
+#    defaultAutoCommit: false
+#    testOnConnect: false
+#    testOnReturn: false
+    tomcat:
+      min-idle: 1
+      max-idle: 15
+      max-active: 5
+      max-wait: 300
+      default-auto-commit: false
+      test-on-connect: false
+      test-on-return: false
+      test-while-idle: false
+  
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+### SKIP SECURITY FOR TESTING..
+skip:
+  security: N
+
+ess:
+  service:
+    username: enterprise
+    password: ENC(2P0VXoJUCv/CTUm9VQBtu7lWJK7l8l3s4UjiGtUakck=)
+    client:
+      ids: EM,SIMS,TL,VAN,VA,SIA,RIN,HT,EC,SWIFT,SL,ML,MAR,ESB,ARCO,INF,RP,CPORT,T2A,BAT,WLRT,LTE        
