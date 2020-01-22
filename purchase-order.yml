@@ -1,6 +1,5 @@
 spring:
-  profiles:
-    active: dev
+  profiles: dev
   application:
     name: purchase-order
   
@@ -46,8 +45,7 @@ ess:
 ---
 
 spring:
-  profiles:
-    active: qa
+  profiles: qa
   application:
     name: purchase-order
   
