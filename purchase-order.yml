@@ -41,4 +41,44 @@ ess:
     username: enterprise
     password: ENC(2P0VXoJUCv/CTUm9VQBtu7lWJK7l8l3s4UjiGtUakck=)
     client:
+      ids: EM,SIMS,TL,VAN,VA,SIA,RIN,HT,EC,SWIFT,SL,ML,MAR,ESB,ARCO,INF,RP,CPORT,T2A,BAT,WLRT,LTE
+
+----
+
+spring:
+  profiles:
+    active: qa
+  application:
+    name: purchase-order
+  
+  datasource:
+    url: jdbc:oracle:thin:@UHPEXA01-SCAN.renters-choice-inc.com:1521/ENTTS01OLTP01
+    username: SIMSAPP01
+    password: ENC(6+MqkynNhyltl6Y66q6Jtyc05CAax8VuDREofTGBa3o=)
+    tomcat:
+      min-idle: 1
+      max-idle: 15
+      max-active: 5
+      max-wait: 300
+      default-auto-commit: false
+      test-on-connect: false
+      test-on-return: false
+      test-while-idle: false
+  
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+
+### SKIP SECURITY FOR TESTING..
+skip:
+  security: N
+
+ess:
+  service:
+    username: enterprise
+    password: ENC(ubdP3H0NtQws2FvBJ43694Xcvic4JSd9iFRZp42fLXE=)
+    client:
       ids: EM,SIMS,TL,VAN,VA,SIA,RIN,HT,EC,SWIFT,SL,ML,MAR,ESB,ARCO,INF,RP,CPORT,T2A,BAT,WLRT,LTE        
