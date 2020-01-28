@@ -50,7 +50,7 @@ spring:
     name: purchase-order
   
   datasource:
-    url: jdbc:oracle:thin:@UHPEXA01-SCAN.renters-choice-inc.com:1521/ENTTS01OLTP01
+    url: jdbc:oracle:thin:@UHPEXA01-SCAN.renters-choice-inc.com:1521/ENTTS01OLTP01---random
     username: SIMSAPP01
     password: ENC(6+MqkynNhyltl6Y66q6Jtyc05CAax8VuDREofTGBa3o=)
     tomcat:
