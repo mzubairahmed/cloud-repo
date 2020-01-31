@@ -39,7 +39,7 @@ ess:
   service:
     username: enterprise
     password: ENC(2P0VXoJUCv/CTUm9VQBtu7lWJK7l8l3s4UjiGtUakck=)
-    test-key:testz
+    test-key: testz
     client:
       ids: EM,SIMS,TL,VAN,VA,SIA,RIN,HT,EC,SWIFT,SL,ML,MAR,ESB,ARCO,INF,RP,CPORT,T2A,BAT,WLRT,LTE
 
